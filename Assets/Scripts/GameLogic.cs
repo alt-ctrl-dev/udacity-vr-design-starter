@@ -135,7 +135,6 @@ public class GameLogic : MonoBehaviour {
 	}
 
 	public void puzzleSuccess() { //Do this when the player gets it right
-		successAudioHodler.GetComponent<GvrAudioSource> ().Play ();
 		iTween.MoveTo (player, 
 			iTween.Hash (
 				"position", restartPoint.transform.position, 
@@ -148,7 +147,7 @@ public class GameLogic : MonoBehaviour {
 	}
 
 	public void finishingFlourish() { //A nice visual flourish when the player wins
-		//this.GetComponent<AudioSource>().Play(); //Play the success audio
+		successAudioHodler.GetComponent<GvrAudioSource> ().Play (); //Play the success audio
 		restartUI.SetActive (true);
 		playerWon = true;
 
