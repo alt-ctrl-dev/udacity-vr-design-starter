@@ -8,6 +8,8 @@ public class GameLogic : MonoBehaviour {
 	public GameObject startUI, restartUI;
 	public GameObject startPoint, playPoint, restartPoint;
 	public GameObject[] puzzleSpheres; //An array to hold our puzzle spheres
+	public GameObject failAudioHodler;
+	public GameObject successAudioHodler;
 
 	public int puzzleLength = 5; //How many times we light up.  This is the difficulty factor.  The longer it is the more you have to memorize in-game.
 	public float puzzleSpeed = 1f; //How many seconds between puzzle display pulses
@@ -126,12 +128,14 @@ public class GameLogic : MonoBehaviour {
 		Debug.Log("You've Failed, Resetting puzzle");
 
 		currentSolveIndex = 0;
+		failAudioHodler.GetComponent<GvrAudioSource> ().Play ();
 
 		startPuzzle ();
 
 	}
 
 	public void puzzleSuccess() { //Do this when the player gets it right
+		successAudioHodler.GetComponent<GvrAudioSource> ().Play ();
 		iTween.MoveTo (player, 
 			iTween.Hash (
 				"position", restartPoint.transform.position, 
