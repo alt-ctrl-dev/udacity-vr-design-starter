@@ -13,3 +13,10 @@ you will the following in your project to work properly:
 - [Unity Particle Pack](https://www.assetstore.unity3d.com/en/#!/content/73777)
 - [iTween](https://www.assetstore.unity3d.com/en/#!/content/84)
 
+----------
+
+## Built using
+
+- Unity 5.5.0f3
+- Google VR 1.0.3
+
