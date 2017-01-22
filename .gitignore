@@ -30,3 +30,6 @@ sysinfo.txt
 *.unitypackage
 Assets/Plugins/
 Assets/GoogleVR/
+Assets/EffectExamples*
+Assets/PB_Spider*
+Assets/Standard Assets*
