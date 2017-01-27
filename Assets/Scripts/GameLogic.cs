@@ -64,7 +64,7 @@ public class GameLogic : MonoBehaviour {
 		//Generate a random number one through five, save it in an array.  Do this n times.
 		//Step through the array for displaying the puzzle, and checking puzzle failure or success.
 		startUI.SetActive (false);
-		eventSystem.SetActive(false);
+		//eventSystem.SetActive(false);
 		iTween.MoveTo (player, playPoint.transform.position, 5f);
 		CancelInvoke ("displayPattern");
 		InvokeRepeating("displayPattern", 3, puzzleSpeed); //Start running through the displaypattern function
