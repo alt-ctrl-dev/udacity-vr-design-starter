@@ -13,25 +13,21 @@ public class lightUp : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
 	}
+
 	public void patternLightUp(float duration) { //The lightup behavior when displaying the pattern
 		StartCoroutine(lightFor(duration));
 	}
 
-
 	public void gazeLightUp() {
 		this.GetComponent<MeshRenderer>().material = lightUpMaterial; //Assign the hover material
-		//this.GetComponent<GvrAudioSource>().Play();
-
-		//gameLogic.GetComponent<gameLogic>().playerSelection(this.gameObject);
-
-
 	}
+
 	public void playerSelection() {
 		gameLogic.GetComponent<GameLogic>().playerSelection(this.gameObject);
 		this.GetComponent<GvrAudioSource>().Play();
 	}
+
 	public void aestheticReset() {
 		this.GetComponent<MeshRenderer>().material = defaultMaterial; //Revert to the default material
 	}
@@ -40,7 +36,6 @@ public class lightUp : MonoBehaviour {
 		this.GetComponent<MeshRenderer>().material = lightUpMaterial; //Assign the hover material
 		this.GetComponent<GvrAudioSource> ().Play (); //Play the audio attached
 	}
-
 
 	IEnumerator lightFor(float duration) { //Light us up for a duration.  Used during the pattern display
 		patternLightUp ();
